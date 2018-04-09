@@ -1,0 +1,24 @@
+﻿<div id="body">
+   <p id="para"></p>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+$(function()
+{
+    //para = Window.getElementById("para");
+
+    $.getJSON('/api/ValuesController', function(contactsJsonPayload)
+        {
+            //$(contactsJsonPayload).each(function(i, item)
+            //{
+              //  $('#contacts').append('<li>' + item.Name + '</li>');
+            //});
+        //para.innerHTML = contactsJsonPayload;
+        console.log(contactsJsonPayload);
+
+        
+        });
+});
+    </script>
+}
