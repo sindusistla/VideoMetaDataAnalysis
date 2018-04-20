@@ -14,46 +14,52 @@ using Newtonsoft.Json.Linq;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Core;
+using Newtonsoft.Json;
+using System.Web.Script.Serialization;
 
 namespace VideoMetaDataAWD.Services
 {
     public class GetTags
     {
         //
-        public VideoData GetAllTags(string ID) {
+        public object GetAllTags(string ID) {
 
             var client = new HttpClient();
             var queryString = HttpUtility.ParseQueryString(string.Empty);
             List<MetaTag> Tags = new List<MetaTag>();
             var VideoData = new VideoData();
-            
 
-            // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "39dc76f4c2ec4fb38831bb1fe2de6d9e");
-
-            // Request parameters
-            queryString["language"] = "en-US";
-            var uri = "https://videobreakdown.azure-api.net/Breakdowns/Api/Partner/Breakdowns/08da529a3f";
+            // MongoDb Connection
             var ConnectionString = "mongodb://aditi:swlp@ds161175.mlab.com:61175/tagdatabase";
             var Mongoclient = new MongoClient(ConnectionString);
             var db = Mongoclient.GetDatabase("tagdatabase");
             var vidCol = db.GetCollection<BsonDocument>("videoCollection");
             var tagCol = db.GetCollection<BsonDocument>("tagCollection");
 
+            //Check if the video is already been analysed
+            var VideoData_DB = vidCol.Find(new BsonDocument() {{"id", ID} });
+           
+
+
+            // Request parameters
+            queryString["language"] = "en-US";
+            var uri = "https://videobreakdown.azure-api.net/Breakdowns/Api/Partner/Breakdowns/" + ID;
+
+
+
+            // Request headers
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "39dc76f4c2ec4fb38831bb1fe2de6d9e");
             var response = client.GetAsync(uri).Result;
-
             var json = response.Content.ReadAsStringAsync().Result;
-
-
             JToken json_obj = JObject.Parse(json);
 
             // Retrieve VideoID VideoData.VideoId =
             VideoData.VideoId = (string)json_obj.SelectToken("id");
-            VideoData.VideoName= (string)json_obj.SelectToken("name");
+            VideoData.VideoName = (string)json_obj.SelectToken("name");
             JObject firstItemSnippet = JObject.Parse(json_obj["summarizedInsights"].ToString());
             var topics = (JArray)firstItemSnippet.SelectToken("topics");
 
-          
+
             // var list = new List<>();
             foreach (var item in topics)
             {
@@ -70,16 +76,23 @@ namespace VideoMetaDataAWD.Services
                 }
                 Tag.Appearances = AppearList;
 
-                Tags.Add(Tag);               
+                Tags.Add(Tag);
             }
 
             VideoData.Tags = Tags;
+            VideoData.VideoURL = "https://www.youtube.com/watch?v=9vQTuwObuWo";
 
+            string json_response = JsonConvert.SerializeObject(VideoData);
+      //      string json_response = JavaScriptSerializer.Serialize(VideoData);
             BsonDocument document = VideoData.ToBsonDocument();
-           
+
             vidCol.InsertOne(document);
             Console.WriteLine(VideoData);
-            return VideoData;
+
+
+            // return VideoData;
+            return json_response;   //08da529a3f
+   
         }
 
 

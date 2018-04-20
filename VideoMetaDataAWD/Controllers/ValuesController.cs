@@ -4,12 +4,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Runtime.Serialization.Json;
 using VideoMetaDataAWD.Services;
 using VideoMetaDataAWD.Models;
+using Newtonsoft.Json.Linq;
+using System.Web.Script.Services;
+using System.Web.Services;
 
 namespace VideoMetaDataAWD.Controllers
 {
+    [ScriptService]
     [Route("api/ValuesController/{id}")]
     public class ValuesController : ApiController
     {
@@ -26,12 +30,18 @@ namespace VideoMetaDataAWD.Controllers
                 this.VideoMetaDataContainer = new GetTags();
             }
 
-            public VideoData Get(string ID)
+     
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public object Get(string ID)
             {
-                
-                return this.VideoMetaDataContainer.GetAllTags(ID);
 
-            }
+            object response= this.VideoMetaDataContainer.GetAllTags(ID);
+            return new HttpResponseMessage()
+            {
+                Content = new StringContent((string)response, System.Text.Encoding.UTF8, "application/json")
+            };
+
+        }
 
     }
 

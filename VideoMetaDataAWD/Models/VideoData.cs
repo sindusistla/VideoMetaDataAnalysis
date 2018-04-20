@@ -19,6 +19,8 @@ namespace VideoMetaDataAWD.Models
     {
         public string VideoId { get; set; }
         public string VideoName { get; set; }
+
+        public string VideoURL { get; set; }
         public List<MetaTag> Tags
         {
             get;
