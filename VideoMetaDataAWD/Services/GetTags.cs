@@ -90,6 +90,9 @@ namespace VideoMetaDataAWD.Services
 
         public string getUrl(string videoId) {
             // Get Youtube URL using the video ID with respect to Microsoft API Video ID
+            // Because of the time constraint we have added few videos related to our domain to the microsoft api due to time constraint.
+            // In future we would like to expand the scope by allowing the user to directly upload videos from SWLP platform to microsoft api 
+            // The microsoft api <-> youtube url mapping would be handled dynamically
          
             string videoUrl="";
 
