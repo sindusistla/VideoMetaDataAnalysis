@@ -99,31 +99,31 @@ namespace VideoMetaDataAWD.Services
             switch (videoId)
             {
                 case "d7c293c3ad":
-                    videoUrl= "https://youtu.be/9vQTuwObuWo";
+                    videoUrl= "9vQTuwObuWo";
                     break;
                 case "9a2dab6aa4":
-                    videoUrl = "https://youtu.be/PG3Wgt9IcSQ";
+                    videoUrl = "PG3Wgt9IcSQ";
                     break;
                 case "e494dce87f":
-                    videoUrl = "https://youtu.be/WOhAA0kDtuw";
+                    videoUrl = "WOhAA0kDtuw";
                     break;
                 case "c4c1ad4c9a":
-                    videoUrl = "https://youtu.be/DU23gG0geiQ";
+                    videoUrl = "DU23gG0geiQ";
                     break;
                 case "ed6ede78ad":
-                    videoUrl = "https://youtu.be/_HEdTiuESro";
+                    videoUrl = "_HEdTiuESro";
                     break;
                 case "f4f476432c":
-                    videoUrl = "https://youtu.be/CLoNO-XxNXU";
+                    videoUrl = "CLoNO-XxNXU";
                     break;
                 case "c177fae461":
-                    videoUrl = "https://youtu.be/dvFu4EghkDs";
+                    videoUrl = "dvFu4EghkDs";
                     break;
                 case "07ee39c30b":
-                    videoUrl = "https://youtu.be/l_3w1WlwTyQ";
+                    videoUrl = "l_3w1WlwTyQ";
                     break;
                 case "52fd94d84c":
-                    videoUrl = "https://youtu.be/pfAncSK7LwA";
+                    videoUrl = "pfAncSK7LwA";
                     break;
 
                 default:
