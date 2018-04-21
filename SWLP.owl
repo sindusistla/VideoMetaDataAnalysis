@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sindu/ontologies/2018/3/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sindu/ontologies/2018/3/">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ontology for Semantic Based Web Learning Platform</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Classes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="JavaScript"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="C++"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Array_Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="C"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Android_Development"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dynamic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Data_Science"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Ada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Inheritance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="COBRA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Abstraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Multithreding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BasicConstructs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Programming_Languages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cobol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Objects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PHP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Command_Line_Interface_Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Static"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Serialization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Encapsulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Cilk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Go"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Polymorphism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Java"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Bash"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Matlab"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VBScript"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DataBase_Query_Languages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Application_Development_Specific_Languages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Compiled_Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Python"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Concurrent_Languages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="R"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interfaces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interpreted_Languages"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Opeartors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Loops"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VisualBasic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Applet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LISP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Variables"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OOP"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Abstraction"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Ada"/>
+        <Class IRI="Concurrent_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Android_Development"/>
+        <Class IRI="Application_Development_Specific_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Applet"/>
+        <Class IRI="Java"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Application_Development_Specific_Languages"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Array_Language"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bash"/>
+        <Class IRI="Command_Line_Interface_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BasicConstructs"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="C"/>
+        <Class IRI="Compiled_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="COBRA"/>
+        <Class IRI="Compiled_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cilk"/>
+        <Class IRI="Concurrent_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Classes"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Cobol"/>
+        <Class IRI="Compiled_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Command_Line_Interface_Language"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Compiled_Language"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Concurrent_Languages"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataBase_Query_Languages"/>
+        <Class IRI="Application_Development_Specific_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Data_Science"/>
+        <Class IRI="Application_Development_Specific_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dynamic"/>
+        <Class IRI="Polymorphism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Encapsulation"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Go"/>
+        <Class IRI="Concurrent_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Inheritance"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interfaces"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interpreted_Languages"/>
+        <Class IRI="Programming_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Java"/>
+        <Class IRI="Concurrent_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="JavaScript"/>
+        <Class IRI="Interpreted_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LISP"/>
+        <Class IRI="Interpreted_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Loops"/>
+        <Class IRI="BasicConstructs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Matlab"/>
+        <Class IRI="Array_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Multithreding"/>
+        <Class IRI="Java"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OOP"/>
+        <Class IRI="Java"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Objects"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Opeartors"/>
+        <Class IRI="BasicConstructs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PHP"/>
+        <Class IRI="Interpreted_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Polymorphism"/>
+        <Class IRI="OOP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Python"/>
+        <Class IRI="Interpreted_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="R"/>
+        <Class IRI="Array_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Serialization"/>
+        <Class IRI="Java"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Static"/>
+        <Class IRI="Polymorphism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VBScript"/>
+        <Class IRI="Interpreted_Languages"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Variables"/>
+        <Class IRI="BasicConstructs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VisualBasic"/>
+        <Class IRI="Compiled_Language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="C++"/>
+        <Class IRI="Compiled_Language"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="Command_Line_Interface_Language"/>
+        <Class IRI="Compiled_Language"/>
+        <Class IRI="Concurrent_Languages"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
